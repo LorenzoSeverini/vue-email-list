@@ -234,3 +234,16 @@ li:hover {
         gap: 1rem;
     }
 }
+
+/* media queries from 768px to 1200px  */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .container-header {
+        margin-left: 6.25rem;
+    }
+
+    .container-mail-list {
+        margin-left: 6.25rem;
+    }
+
+}
