@@ -22,7 +22,7 @@
         <header>
             <div class="container-header">
                 <div class="row-header">
-                    <i class="fas fa-envelope fa-2x"></i>
+                    <a class="fas fa-envelope fa-2x"></a>
                     <h1>Vue Mail List</h1>
                 </div>
             </div>
@@ -32,19 +32,23 @@
         <div class="container-mail-list">
             <div class="row-mail-list">
                 <h2>Email List</h2>
-                <ul>
-                    <li v-for="(email, index) in emailList" :key="index">
-                        <span>{{ email }}</span>
-                        <button @click="deleteEmail(index)"><i class="fas fa-trash-alt"></i></button>
-                    </li>
-                </ul>
                 <div class="container-button">
                     <div class="row-button">
                         <button @click="showEmailList">Show all Email</button>
-                        <button @click="deleteAllEmail">Delete All</button>
                         <button @click="addEmail">Add email address</button>
+                        <button @click="deleteAllEmail">Delete All</button>
                     </div>
                 </div>
+                <ul>
+                    <li v-for="(email, index) in emailList" :key="index">
+                        <div class="email-text">{{ email }}</div>
+                        <div class="email-list-button">
+                            <button @click=""><a class="fas fa-edit"></a></button>
+                            <button @click=""><a class="fa-solid fa-share"></a></button>
+                            <button @click="deleteEmail(index)"><a class="fas fa-trash-alt"></a></button>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         
