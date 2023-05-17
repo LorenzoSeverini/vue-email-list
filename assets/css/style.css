@@ -1,0 +1,17 @@
+/* Reset CSS */
+/*************/
+::after,
+::before,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777;
+    background-color: #a13939;
+}
