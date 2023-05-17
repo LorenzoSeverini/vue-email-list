@@ -1,17 +1,137 @@
 /* Reset CSS */
 /*************/
-::after,
-::before,
+:root {
+    --color-primary: #cc0000;
+    --color-secondary: #929b93;
+    --color-tertiary: #83947f;
+    --color-quaternary: #2c2a2a;
+}
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #777;
-    background-color: #a13939;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-quaternary);
+}
+
+/* vue css */
+#app {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+/* header css */
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.row-header:hover {
+    opacity: 0.8;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+}
+
+/* Mail list css */
+.container-mail-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.row-mail-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #929b93;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .625rem;
+    margin-bottom: .625rem;
+    background-color: var(--color-tertiary);
+    border-radius: .3125rem;
+    box-shadow: 0 0 .3125rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+li:hover {
+    opacity: 0.8;
+}
+
+li span {
+    font-size: 1.125rem;
+}
+
+li button {
+    padding: .3125rem .625rem;
+    border: none;
+    border-radius: .3125rem;
+    background-color: var(--color-primary);
+    color: var(--color-quaternary);
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: var(--color-primary);
+}
+
+/* Button css */
+.container-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.row-button {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: .3125rem .625rem;
+    border: none;
+    border-radius: .3125rem;
+    background-color: var(--color-primary);
+    color: var(--color-quaternary);
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
 }
